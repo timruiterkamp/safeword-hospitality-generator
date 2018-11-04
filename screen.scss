@@ -1,0 +1,78 @@
+$dark-color: #092327;
+$light-color: #90C2E7;
+$turqoise: #00A9A5;
+$text: #4E8098;
+$black-transparent: rgba(0,0,0,.15);
+
+
+body {
+    padding: 0;
+    margin: 0 auto;
+    background-color: $dark-color;
+    font-size: 'open sans', sans-serif;
+}
+
+main {
+
+    padding: 3em;
+
+    h2 {
+        color: $turqoise;
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+}
+
+section.generator {
+    width: 60vw;
+    margin: 0 auto;
+    
+    p {
+        color: white;
+        font-size: 1em;
+        line-height: 1.5;
+        text-align: center;
+    }
+}
+
+form {
+    box-shadow: 0 0 5em 1px $black-transparent;
+    border-radius: .5em;
+    background-color: white;
+    margin: 2em 0 0;
+
+    display: flex;
+    flex-direction: column;
+    padding: 3em 3em 1.5em;
+
+    input {
+        border: 1px solid $light-color;
+        padding: 1em;
+        margin: 1em 0;
+
+        &::placeholder {
+            font-size: 1.25em;
+        }
+    }  
+
+    label {
+        margin: .5em 0 0;
+        font-weight: 500;
+    }
+
+    select {
+        height: 3.5em;
+        border: 1px solid $light-color;
+        padding: .75em 1em;
+        margin: 1em 0;
+    }
+
+    input[type="submit"] {
+        background-color: $turqoise;
+        color: white;
+        font-size: 1em;
+        border: 0;
+    }
+
+}

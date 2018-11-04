@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Safeword generator</title>
+    <link rel="stylesheet" href="screen-dist.css">
+</head>
+<body>
+    <main>
+        <h2>An easy generator for safewords in hospitality</h2>
+        <section class="generator">
+            <p>The idea is to Improve safety for men and woman going on out.
+                By hanging a sheet with safety instructions in the form of drinknames people can 
+                give information to the bartenders in the form of a shot name when things aren't going well
+            </p>
+            <p>I hope more companies would take on these safety regulations to improve customer care</p>
+            <form>
+                <label for="companyname">What is your company name</label>
+                <input type="text" id="#js-company" name="companyname" placeholder="Company name" required>
+
+                <label for="shotname">Choose your safety drink</label>
+                <select name="shotname" id="#js-shotname">
+                    <option disabled selected>-- Select option --</option>
+                    <option value="Angel">Angel shot</option>
+                    <option value="Trace">Trace shot</option>
+                    <option value="fuzz">Fuzz shot</option>
+                    <option value="red-margarita">Red margarita</option>
+                    <option value="flickering-daiquiry" >Flickering daiquiry</option>
+                    <option value="tropical cola">Tropical cola</option>
+                </select>
+                <input type="submit" id="js-submit" value="Generate pdf">
+            </form>
+        </section>
+    </main>
+</body>
+<script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
+<script src="index.js"></script>
+</html>

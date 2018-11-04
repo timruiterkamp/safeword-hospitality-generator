@@ -1,0 +1,27 @@
+{
+  "name": "safeword-hospitality-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timruiterkamp/safeword-hospitality-generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timruiterkamp/safeword-hospitality-generator/issues"
+  },
+  "homepage": "https://github.com/timruiterkamp/safeword-hospitality-generator#readme",
+  "prettier": {
+    "tabWidth": 4,
+    "useTabs": true,
+    "singleQuote": true,
+    "semi": false,
+    "trailingComma": "none"
+}
+}
