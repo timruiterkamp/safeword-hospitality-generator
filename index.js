@@ -2,9 +2,9 @@ document.querySelector('#js-submit').addEventListener('click', generatePDF)
 
 function generatePDF(e) {
 	e.preventDefault()
-	const doc = new jsPDF()
-	const companyName = document.querySelector('#js-company')
-	const shotname = document.querySelector('#js-shotname')
+	// const doc = new jsPDF()
+	// const companyName = document.querySelector('#js-company')
+	// const shotname = document.querySelector('#js-shotname')
 
 	console.log(companyName, shotname)
 

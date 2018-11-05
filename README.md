@@ -5,8 +5,14 @@ this to improve customer care and help their customers in difficult situations.
 ## Improving
 Feel free to open pull requests with new suggestions or improvements.
 
+## To do
+[ ] Support multiple languages
+[ ] Support own input for shotname
+[ ] Create more safety drink names
+[ ] Connect jsPDF to the submit button
+
 ## Dev tools used
-- [https://prepros.io/](Prepros)
+- [Prepros](https://prepros.io/)
 
 ## License 
 MIT License
