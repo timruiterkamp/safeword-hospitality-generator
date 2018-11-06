@@ -1,21 +1,21 @@
-# safeword-hospitality-generator
-The idea of this project is to easy generate a pdf with a safeword, so public places can use
-this to improve customer care and help their customers in difficult situations.
+# safeword-generator
 
-This is often used in a situation where a customer gets bothered by someone and with these safewords the customer can attend employees of the situation.  
-This will improve the safety of the customers and provides a better overall experience
+## Project setup
+```
+npm install
+```
 
-## Improving
-Feel free to open pull requests with new suggestions or improvements.
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-## To do
-[ ] Support multiple languages
-[ ] Support own input for shotname
-[ ] Create more safety drink names
-[ ] Connect jsPDF to the submit button
+### Compiles and minifies for production
+```
+npm run build
+```
 
-## Dev tools used
-- [Prepros](https://prepros.io/)
-
-## License 
-MIT License
+### Lints and fixes files
+```
+npm run lint
+```
