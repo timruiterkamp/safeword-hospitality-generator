@@ -8,12 +8,19 @@ This will improve the safety of the customers and provides a better overall expe
 ## Improving
 Feel free to open pull requests with new suggestions or improvements.
 
+## Code
+```bash
+git clone https://github.com/timruiterkamp/safeword-hospitality-generator.git
+cd safeword-hospitality-generator
+npm run serve
+```
+
 ## To do
-[ ] Support multiple languages
-[ ] Support own input for shotname
-[ ] Create more safety drink names
-[ ] Connect jsPDF to the submit button
-[ ] Support different designs
+* [ ] Support multiple languages  
+* [ ] Support own input for shotname  
+* [ ] Create more safety drink names  
+* [ ] Connect jsPDF to the submit button  
+* [ ] Support different designs  
 
 ## Dev tools used
 - [Prepros](https://prepros.io/)
