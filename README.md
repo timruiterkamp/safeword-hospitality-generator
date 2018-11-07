@@ -17,13 +17,10 @@ npm run serve
 
 ## To do
 * [ ] Support multiple languages  
-* [ ] Support own input for shotname  
+* [x] Support own input for shotname  
 * [ ] Create more safety drink names  
 * [ ] Connect jsPDF to the submit button  
 * [ ] Support different designs  
-
-## Dev tools used
-- [Prepros](https://prepros.io/)
 
 ## License 
 MIT License

@@ -1,11 +1,13 @@
 <template>
     <main>
         <section class="generator">
-            <p>The idea is to Improve safety for men and woman going on out.
-                By hanging a sheet with safety instructions in the form of drinknames people can 
-                give information to the bartenders in the form of a shot name when things aren't going well
+            <!-- <safety /> -->
+            <!-- <img src="../assets/safety.png" /> -->
+            <p>The idea is to Improve safety for men and woman going out.
+                By hanging up a sheet with safety instructions in for example the bathroom, people can 
+                give information to the bartenders in the form of a safeword (shot name) when things aren't going well
             </p>
-            <p>I hope more companies would take on these safety regulations to improve customer care</p>
+            <p>I hope more companies would take on these safety precautions to improve customer safety.</p>
             <GeneratorForm />
         </section>
     </main>
@@ -13,11 +15,12 @@
 
 <script>
 import GeneratorForm from './GeneratorForm';
-
+// import safety from '../assets/safety'
 export default {
     name: 'MainContent',
     components: {
-        GeneratorForm
+        GeneratorForm,
+        // safety
     }
 }
 </script>
