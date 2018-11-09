@@ -62,13 +62,13 @@ export default {
             const pdfFonts = require('pdfmake/build/vfs_fonts.js')
             pdfMake.vfs = pdfFonts.pdfMake.vfs;
         }
-        pdfMake.fonts = {
-            openSans: {
-                normal: '../assets/fonts/OpenSans-Regular.ttf',
-                bold: '../assets/fonts/OpenSans-Bold.ttf',
-                italics: '../assets/fonts/OpenSans-Italic.ttf',
-            },
-        }
+        // pdfMake.fonts = {
+        //     openSans: {
+        //         normal: '../assets/fonts/OpenSans-Regular.ttf',
+        //         bold: '../assets/fonts/OpenSans-Bold.ttf',
+        //         italics: '../assets/fonts/OpenSans-Italic.ttf',
+        //     },
+        // }
         var docDefinition = { 	
             // background: [
             //     {
