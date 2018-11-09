@@ -38,7 +38,7 @@
             <p><strong>With ice:</strong> Your bartender will call a taxi or Uber for you.</p>
             <p><strong>With lime:</strong> Your bartender will call the police.</p>
             <p><strong>We handle things discreetly, we want you safe!</strong></p>
-        </section>
+        </section> 
         <input type="submit" id="js-submit" value="Generate pdf" @click="pdfgen()">
     </form>
 </template>
