@@ -54,19 +54,30 @@ export default {
         }
     },
     methods: {
+
         pdfgen() {
         const pdfMake = require('pdfmake/build/pdfmake.js')
-        
         if (pdfMake.vfs == undefined){
             const pdfFonts = require('pdfmake/build/vfs_fonts.js')
             pdfMake.vfs = pdfFonts.pdfMake.vfs;
         }
 
-        const docDefinition = { 	
+        const docDefinition = { 
+            background: function () {
+                return {
+                    canvas: [
+                        {
+                            type: 'rect',
+                            x: 0, y: 0, w: 595.28, h: 100,
+                            color: '#00A676'
+                        }
+                    ]
+                };
+            },
             content: [
             {
                 text: this.companyName || '',
-                style: 'header'
+                style: 'heading'
             },
             {
             
@@ -80,9 +91,9 @@ export default {
             },
             {
                 text: [
-                    {text: 'Neat: ',  bold: true}, 'Your bartender will escort you to your vehicle. \n',
-                    {text: 'With ice: ',  bold: true}, 'Your bartender will call a taxi or Uber for you. \n',
-                    {text: 'With lime: ',  bold: true}, 'Your bartender will call the police. \n',  
+                    {text: 'Neat: ',  bold: true, color: '#00A676'}, 'Your bartender will escort you to your vehicle. \n',
+                    {text: 'With ice: ',  bold: true,  color:'#00A676'}, 'Your bartender will call a taxi or Uber for you. \n',
+                    {text: 'With lime: ',  bold: true,  color:'#00A676'}, 'Your bartender will call the police. \n',  
                 ],
                 style: 'shotinfo'
             },
@@ -92,12 +103,13 @@ export default {
             },
         ],
         styles: {
-            header: {
-                fontSize: 36,
+            heading: {
+                fontSize: 30,
                 bold: true,
                 alignment: 'center',
                 marginBottom: 30,
-                color: 'red'
+                marginTop: 100,
+                color: '#00A676'
             },
             introduction: {
                 fontSize: 16,
@@ -105,15 +117,15 @@ export default {
                 lineHeight: 1.5
             },
             shotname: {
-                fontSize: 24,
+                fontSize: 36,
                 alignment: 'center',
-                marginTop: 15,
+                marginTop: 20,
                 marginBottom: 30,
                 textDecoration: 'underline',
                 borderBottom: '1px solid black',
                 paddingBottom: 5,
                 bold: true,
-                color: '#092327'
+                color: '#00A676'
             },
             shotinfo: {
                 fontSize: 16,
