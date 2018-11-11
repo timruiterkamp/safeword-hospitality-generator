@@ -154,7 +154,7 @@ form {
     box-shadow: 0 0 5em 1px rgba(0,0,0,.15);
     border-radius: .5em;
     background-color: #17181c;
-    margin: 2em 0 0;
+    margin: 3.5em 0 0;
 
     display: flex;
     flex-direction: column;
@@ -183,20 +183,23 @@ fieldset > div {
     width: 49%;
 }
 input {
-    border: 1px solid #90C2E7;
+    border: 1px solid #1d5985;
     padding: 1em;
     margin: 1em 0;
     width: 100%;
+    background-color: transparent;
 }  
 
 
 input::placeholder {
     font-size: 1.25em;
+    color: #b9cbd9;
 }
 
 label {
     margin: .5em 0 0;
     font-weight: 500;
+    color: #b9cbd9;
 }
 select {
     height: 3.5em;
