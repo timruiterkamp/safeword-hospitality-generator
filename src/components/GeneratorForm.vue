@@ -56,26 +56,13 @@ export default {
     methods: {
         pdfgen() {
         const pdfMake = require('pdfmake/build/pdfmake.js')
-        // const backgroundImage = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABKYAAAaUBAMAAAA4HQlaAAAAFVBMVEUAAJn///82Nq9kZMKPj9O2tuPZ2fCuhSpzAAAKyUlEQVR42u3cwU3DQBCG0YgO3EJSwlJCUkJy55L+S0AkcIPIa4/wePa9Eibfwb9sOBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADG8XZqF1cgxPHUzteP6YtjsDam95+YvrkJy2O63KZfOA3dMbU/YtIUvc/fx3Z+GZOm6Inpep/mcjBmjbkO7sasMacp1oy5pTFpip4xpymix5ymiB5zmuJFTIvGnKaIHnOaInrMaYroMacpz99bxKSpsmNus5g0VW/M3acU/Bq7f/5u/zLmNDXImEsWk6Z2PeZSxqQpY05TQ4+5XcSkKWNOU8acplg05nYck6aMOU0Zc5qi0pjTlDGnKTFpitHGnKbSxFRmzGkqw5gbLyZNGXOayh7TEM/fmjLmNGXMacqYQ1NrYmpi0lTkmBOTpow5TRlzmir6/C0mTRlzmjLmNOU1L5qaM+ZufnhNGXOaMuY0VXbMiUlTxpymjDlqNuU1r6aMOU0ZcxRu6vHNrpg0ZcxpSkyUbMqY05RvdsnXlDGnKWOOfE35ZldTxhzpmjLmNGXMka8pr3k1ZcyRr6nHmBOTpow5MjXlm13CmnqOOTER0JQxR1hTXvMS1pQ/wCSsKc/fRDVlzBHW1PO/6YiJgKaMOcKaMuaIbEpMRDflBGgKTaEp0BSaQlOgKTSFpkBTaApNgabQFJpCU6ApNIWmQFNoCk2BptAUmgJNoSk0haZAU2gKTYGm0BSaAk2hKTQFmkJTaAo0habQFJoCTaEpNAWaQlNoCjSFptAUaApNoSk0BZpCU2gKNIWm0BRoCk2hKdAUmkJToCk0habQFGgKTaEp0BSaQlOgKTSFpkBTaApNoSnQFJpCU6ApNIWmQFNoCk2BptAUmgJNoSk0haZAU2gKTYGm0BSaAk2hKTQFmkJTaApNgabQFJoCTaEpNAWaQlNoCjSFptAUmnICNIWm0BRoCk2hKdAUmkJToCk0haZAU2gKTaEp0BSaQlOgKTSFpkBTaApNgabQFJpCU6ApNIWmQFNoCk2BptAUmgJNoSk0BZpCU2gKTYGm0BSaAk2hKTQFmkJTaAo0habQFJoCTaEpNAWaQlNoCjSFptAUaApNoSnQFJpCU2gKNIWm0BRoCk2hKdAUmkJToCk0habQFGgKTaEp0BSaQlOgKTSFpkBTaApNgabQFJpCU6ApNIWmQFNoCk2BptAUmgJNoSk0haZAU2gKTYGm0BSaAk2hKTQFmkJTaApNOQGaQlNoCjSFptAUaApNoSnQFJpCU6ApNIWm0BRoCk2hKdAUmkJToCk0haZAU2gKTaEp0BSaQlOgKTSFpkBTaApNgabQFJoCTaEpNIWmQFNoCk2BptAUmgJNoSk0BZpCU2gKTYGm0BSaAk2hKTQFmkJTaAo0habQFGgKTaEpNAWaQlNoCjSFptAUaApNoSnQFJpCU2gKNIWm0BRoCk2hKdAUmkJToCk0haZAU2gKTaEp0BSaQlOgKTSFpkBTaApNgabQFJpCU6ApNIWmQFNoCk2BptAUmgJNoSk0haacAE2hKTQFmkJTaAo0habQFGgKTaEp0BSaQlNoCjSFptAUaApNoSnQFJpCU6ApNIWm0BRoCk2hKdAUmkJToCk0haZAU2gKTYGm0BSaQlOgKTSFpkBTaApNgabQFJoCTaEpNIWmQFNoCk2BptAUmgJNoSk0BZpCU2gKNIWm0BSaAk2hKTQFmkJTaAo0habQFGgKTaEpNAWaQlNoCjSFptAUaApNoSnQFJpCU6ApNIWm0BRoCk2hKdAUmkJToCk0haZAU2gKTaEp0BSaQlOgKTSFpkBTaApNgabQFJpCU06AptAUmgJNoSk0BZpCU2gKNIWm0BRoCk2hKTQFmkJTaAo0habQFGgKTaEp0BSaQlNoCjSFptAUaApNoSnQFJpCU6ApNIWmQFNoCk2hKdAUmkJToCk0haZAU2gKTYGm0BSaQlOgKTSFpkBTaApNgabQFJoCTaEpNAWaQlNoCk2BptAUmgJNoSk0BZpCU2gKNIWm0BSaAk2hKTQFmkJTaAo0habQFGgKTaEp0BSaQlNoCjSFptAUaApNoSnQFJpCU6ApNIWm0BRoCk2hKdAUmkJToCk0haZAU2gKTaEpJ0BTaApNgabQFJoCTaEpNAWaQlNoCjSFptAUmgJNoSk0BZpCU2gKNIWm0BRoCk2hKTQFmkJTaAo0habQFGgKTaEp0BSaQlOgKTSFptAUaApNoSnQFJpCU6ApNIWmQFNoCk2hKdAUmkJToCk0haZAU2gKTYGm0BSaAk2hKTSFpkBTaApNgabQFJoCTaEpNAWaQlNoCk2BptAUmgJNoSk0BZpCU2gKNIWm0BRoCk2hKTQFmkJTaAo0habQFGgKTaEp0BSaQlNoCjSFptAUaApNoSnQFJpCU6ApNIWm0JQToCk0haZAU2gKTYGm0BSaAk2hKTQFmkJTaApNgabQFJoCTaEpNAWaQlNoCjSFptAUmgJNoSk0BZpCU2gKNIWm0BRoCk2hKdAUmkJTaAo0habQFGgKTaEp0BSaQlOgKTSFptAUaApNoSnQFJpCU6ApNIWmQFNoCk2BptAUmkJToCk0haZAU2gKTYGm0BSaAk2hKTSFpkBTaApNgabQFJoCTaEpNAWaQlNoCjSFptAUmgJNoSk0BZpCU2gKNIWm0BRoCk2hKTQFmkJTaAo0habQFGgKTaEp0BSaQlNoygnQFJpCU6ApNIWmQFNoCk2BptAUmgJNoSk0haZAU2gKTYGm0BSaAk2hKTQFmkJTaApNgabQFJoCTaEpNAWaQlNoCjSFptAUaApNoSk0BZpCU2gKNIWm0BRoCk2hKdAUmkJTaAo0habQFGgKTaEp0BSaQlOgKTSFpkBTaApNoSnQFJpCU6ApNIWmQFNoCk2BptAUmkJToCk0haZAU2gKTYGm0BSaAk2hKTQFmkJTaApNgabQFJoCTaEpNAWaQlNoCjSFptAUmgJNoSk0BZpCU2gKNIWm0BRoCk2hKTTlBGgKTaEp0BSaQlOgKTSFpkBTaApNgabQFJpCU6ApNIWmQFNoCk2BptAUmgJNoSk0haZAU2gKTYGm0BSaAk2hKTQFmkJTaAo0habQFJoCTaEpNAWaQlNoCjSFptAUaApNoSk0BZpCU2gKNIWm0BRoCk2hKdAUmkJToCk0habQFGgKTaEp0BSaQlOgKTSFpkBTaApNoSnQFJpCU6ApNIWmQFNoCk2BptAUmgJNoSk0haZAU2gKTYGm0BSaAk2hKTQFmkJTaApNgabQFJoCTaEpNAWaQlNoCjSFptAUmnICNIWm0BRoCk2hKdAUmkJToCk0haZAU2gKTaEp0BSaQlOgKTSFpkBTaApNgabQFJpCU6ApNIWmQFNoCk2BptAUmgJNoSk0BZpCU2gKTYGm0BSaAk2xuU9UC9ZukwGdtQAAAABJRU5ErkJggg==';
-
+        
         if (pdfMake.vfs == undefined){
             const pdfFonts = require('pdfmake/build/vfs_fonts.js')
             pdfMake.vfs = pdfFonts.pdfMake.vfs;
         }
-        // pdfMake.fonts = {
-        //     openSans: {
-        //         normal: '../assets/fonts/OpenSans-Regular.ttf',
-        //         bold: '../assets/fonts/OpenSans-Bold.ttf',
-        //         italics: '../assets/fonts/OpenSans-Italic.ttf',
-        //     },
-        // }
-        var docDefinition = { 	
-            // background: [
-            //     {
-            //         image: backgroundImage,
-            //         width: 595
-            //     }
-            // ],
+
+        const docDefinition = { 	
             content: [
             {
                 text: this.companyName || '',
@@ -104,9 +91,6 @@ export default {
                 style: 'lastquote'
             },
         ],
-        defaultStyle: {
-            font: 'openSans'
-        },
         styles: {
             header: {
                 fontSize: 36,
@@ -144,7 +128,7 @@ export default {
             },
             }
         }
-        pdfMake.createPdf(docDefinition).download('safety-precaution-safeword.pdf')
+        pdfMake.createPdf(docDefinition).download('test.pdf')
         }
     }
 }
