@@ -128,7 +128,7 @@ export default {
             },
             }
         }
-        pdfMake.createPdf(docDefinition).download('test.pdf')
+        pdfMake.createPdf(docDefinition).download('safeword-precaution.pdf')
         }
     }
 }
