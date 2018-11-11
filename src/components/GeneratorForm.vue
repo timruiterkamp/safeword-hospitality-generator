@@ -63,7 +63,7 @@ export default {
         }
 
         const docDefinition = { 
-            background: function () {
+            background: () => {
                 return {
                     canvas: [
                         {
