@@ -27,7 +27,7 @@
             </select>
             <input type="text" v-model="shotname" v-if="this.picked === 'own'" />
         </fieldset>
-        <section v-if="companyName || this.picked">
+        <section class="gen-preview" v-if="companyName || this.picked">
             <h3>Preview of the message:</h3>
             <h3 class="company-name">{{companyName}}</h3>
             <h4>Are you on a date that isn't going well?</h4>
@@ -223,5 +223,9 @@ h5.shot-name {
     font-size: 2em;
     text-decoration: underline;
     margin: 1em;
+}
+
+section.gen-preview {
+    color: white;
 }
 </style>
