@@ -14,7 +14,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h2 {
-    color: #00A9A5;
+    color: #67fffb;
     font-size: 2.5em;
     text-align: center;
 }

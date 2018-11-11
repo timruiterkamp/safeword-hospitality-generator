@@ -153,7 +153,7 @@ export default {
 form {
     box-shadow: 0 0 5em 1px rgba(0,0,0,.15);
     border-radius: .5em;
-    background-color: white;
+    background-color: #17181c;
     margin: 2em 0 0;
 
     display: flex;
@@ -210,7 +210,7 @@ input[type="text"] {
     width: 96.5%;
 }
 input[type="submit"] {
-    background-color: #00A9A5;
+    background-color: #00a9a5;
     color: white;
     font-size: 1em;
     border: 0;
